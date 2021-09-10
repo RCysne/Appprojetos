@@ -4,6 +4,7 @@ export default function Home() {
   return (
     
     // Usando o Link em vez do elemento 'a', a página não dá o refresh usando o history api.
+    
     <div>
       <header>
         <Link to='/'>Home</Link>
@@ -19,6 +20,11 @@ export default function Home() {
         </h1>
       </main>
     </div>
+
+
+
+
+
 
 
   // <div>
