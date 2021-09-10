@@ -4,7 +4,9 @@ export default function Login() {
     <div className='container'>
       
       <fieldset className="formLogin">
+
       <legend>APPprojetos</legend>
+
       <p className='clientLogin'>LOGIN</p>
       <label htmlFor='email'>Email:</label>
       <input
@@ -16,6 +18,7 @@ export default function Login() {
         autoFocus
       />
       <br />
+      
       <label htmlFor='password'>Senha:</label>
       <input
         type="password"

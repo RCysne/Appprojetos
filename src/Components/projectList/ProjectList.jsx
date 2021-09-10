@@ -10,6 +10,7 @@ export default function ProjectList() {
           <p className='projects2'>PROJETOS</p>
       <div className="projectArea">
         <div className="registeredList">
+          
           <ul className='listProjects'>
             <li>Padaria X</li>
             <li>Casa 1 Alphaville</li>
@@ -21,12 +22,14 @@ export default function ProjectList() {
             <li>Restaurante de sushi</li>
             <li>Zé da Esquina</li>
           </ul>
+
           <ul>
             <li>Fazenda X</li>
             <li>Frigorífico Y</li>
             <li>Casa de Show</li>
             <li>Shopping</li>
           </ul>
+
         </div>
         </div>
       </fieldset>

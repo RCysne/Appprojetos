@@ -7,6 +7,7 @@ export default function Client() {
         <div className='logomarca'>
           <img id='logo' src="/assets/images/logoDeitada.png"   alt="Logomarca" />
           </div>
+          
           <p className='projects'>PROJETOS</p>
 
         <div className="buttons">

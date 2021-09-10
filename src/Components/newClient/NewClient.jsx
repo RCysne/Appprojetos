@@ -7,6 +7,7 @@ export default function NewClient() {
         <div className='logomarca'>
           <img id='logo' src="/assets/images/logoDeitada.png"   alt="Logomarca" />
           </div>
+
           <p className='projects'>NOVO PROJETO</p>
 
           <div className="newClient">
@@ -17,6 +18,7 @@ export default function NewClient() {
           <div className="btnNewClient">
             <button id="btnNewClient">Carregar Arquivos</button>
           </div>
+          
           <div className="btnSave">
             <button id="btnSave">Salvar</button>
           </div>
