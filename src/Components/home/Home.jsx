@@ -9,12 +9,12 @@ export default function Home() {
     <div>
       <header>
         <Link to='/'>Home</Link>
-        <Link to='/register'> Cadastre-se</Link>
         <Link to='/login'>Login</Link>
-        <Link to='/client'>Usuário</Link>
+        <Link to='/register'> Cadastre-se</Link>
+        {/* <Link to='/client'>Usuário</Link>
         <Link to='/new-client'>Novo</Link>
         <Link to='/project-list'>Lista de Projetos</Link>
-        <Link to='/project-gallery'>Consulta de Projetos</Link>
+        <Link to='/project-gallery'>Consulta de Projetos</Link> */}
       </header>
       <main>
         <h1 className='appprojetosHome'>

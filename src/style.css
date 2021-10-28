@@ -206,7 +206,7 @@ input {
   justify-content: center;
 }
 
-#btnNewClient, #btnSave, #btnLoadProjects {
+#btnNewClient, #btnSave, #btnLoadProjects, #btn_register{
   width: 80%;
   height: 2rem;
   border-radius: 3rem;
@@ -230,6 +230,10 @@ input {
 } 
 
 #btnLoadProjects {
+  border: 1px solid black;
+}
+
+#btn_register:hover {
   border: 1px solid black;
 }
 
@@ -313,6 +317,17 @@ li:hover {
 } 
 
 /* ---------- REGISTER CLIENTS-------------------- */
+
+
+.registerForm ul li {
+  list-style: none;
+}
+
+.sectionForm {
+  border: 1px solid black;
+  padding: 3rem;
+  border-radius: 5rem;
+}
 
 /* .registerForm {
   border: 1px solid black;

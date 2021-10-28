@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Login() {
+export default function Login(props) {
 
   return (
     <div className='container'>
@@ -32,7 +32,7 @@ export default function Login() {
       <br />
 
       <div className="btn">
-        <button id="btnE">Enviar</button>
+        <button onClick={()=>props.history.push("/client")} id="btnE">Entrar</button>
       </div>
     </fieldset>
     </div>

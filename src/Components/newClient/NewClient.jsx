@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function NewClient() {
+export default function NewClient(props) {
   return (
     <div className='container'>
       
@@ -22,7 +22,7 @@ export default function NewClient() {
           </div>
           
           <div className="btnSave">
-            <button id="btnSave">Salvar</button>
+            <button onClick={()=>props.history.push('/project-list')} id="btnSave">Salvar</button>
           </div>
         
       </fieldset>

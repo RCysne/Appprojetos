@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function Register() {
   return (
-      <div className='registerForm'>
+      <div className='registerForm container'>
         <div className="logoRegister">
           <div className="white">
-            <h1>APPProjetos</h1>
+            {/* <h1>APPProjetos</h1> */}
           </div>
         </div>
         <section className="sectionForm" id="sectionForm">
@@ -13,12 +13,12 @@ export default function Register() {
             <nav className="nav-tabs">
               <ul>
               <li>
-                  <input
+                  {/* <input
                     type="radio"
                     name="tabs"
                     className="rd_tabs"
                     id="tab2"
-                  />
+                  /> */}
                   <label className="labelF" htmlFor="tab2">
                     Cadastrar
                   </label>
@@ -58,7 +58,7 @@ export default function Register() {
                     </div>
                   </div>
                 </li>
-                <li>
+                {/* <li>
                   <input
                     type="radio"
                     name="tabs"
@@ -98,7 +98,7 @@ export default function Register() {
                       </button>
                     </div>
                   </div>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </form>

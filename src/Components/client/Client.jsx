@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Client() {
+export default function Client(props) {
   return (
     <div className='container'>
       
@@ -16,11 +16,11 @@ export default function Client() {
         
         
           <div className="btn">
-            <button id="btnNew">Novo</button>
+            <button onClick={()=>props.history.push('/new-client')} id="btnNew">Novo</button>
           </div>
 
           <div className="btn">
-            <button id="btnView">Consultar</button>
+            <button onClick={()=>props.history.push("/project-list")} id="btnView">Consultar</button>
           </div>
           
         </div>
