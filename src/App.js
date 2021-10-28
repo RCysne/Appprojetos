@@ -28,9 +28,9 @@ export default function App() {
         <Switch>
           <Route path="/new-client" component={NewClient} />
         </Switch>
-        <Switch>
-          <Route path="/project-list" component={ProjectList} />
-        </Switch>
+      <Switch>
+        <Route path="/project-list" component={ProjectList} />
+      </Switch> 
         <Switch>
           <Route path="/project-gallery" component={ProjectGallery} />
         </Switch>
@@ -38,3 +38,5 @@ export default function App() {
     </>
   )
 }
+
+

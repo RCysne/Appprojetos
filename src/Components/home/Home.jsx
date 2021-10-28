@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom"
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <div>
       <header>
         <Link to='/'>Home</Link>
+        <Link to='/register'> Cadastre-se</Link>
         <Link to='/login'>Login</Link>
         <Link to='/client'>Usuário</Link>
         <Link to='/new-client'>Novo</Link>
@@ -20,6 +22,9 @@ export default function Home() {
         </h1>
       </main>
     </div>
+  )
+}
+
 
 
 
@@ -43,5 +48,3 @@ export default function Home() {
   //     </h1>
   //   </main>
   // </div>
-  )
-}
