@@ -1,31 +1,36 @@
-import React from 'react';
+// import React from 'react';
+// import logoL from '../../assets/images/LogoL.png'
 
-export default function NewClient(props) {
-  return (
-    <div className='container'>
-      
-      <fieldset className="clientForm">
+// export default function NewClient(props) {
+//   return (
+//     <div className='container'>
         
-        <div className='logomarca'>
-          <img id='logo' src="/assets/images/logoDeitada.png"   alt="Logomarca" />
-          </div>
+//         <div className='logomarca'>
+//           <img id='logo' src={logoL} alt="Logomarca" />
+//         </div>
 
-          <p className='projects'>NOVO PROJETO</p>
+//           <legend>NOVO PROJETO</legend>
 
-          <div className="newClient">
-            <label htmlFor="newClient">ID do Projeto</label>
-            <input type="text" name="newClient" id="newClient" placeholder='Crie uma ID para o projeto.' />
-          </div>
+//           <div className="newClient">
+//             <legend>Nome do Projeto: </legend>
+//             <input type="text" name="newClient" id="newClient" placeholder='Crie uma ID para o projeto.' />
+//           </div>
 
-          <div className="btnNewClient">
-            <button id="btnNewClient">Carregar Arquivos</button>
-          </div>
+//         <div className="buttons">
+
+//           <div className="btnNewClient">
+//             <button id="btnNewClient">Carregar</button>
+//           </div>
           
-          <div className="btnSave">
-            <button onClick={()=>props.history.push('/project-list')} id="btnSave">Salvar</button>
-          </div>
-        
-      </fieldset>
-    </div>
-  )
-}
+//           <div className="btnSave">
+//             <button onClick={()=>props.history.push('/project-list')} id="btnSave">Salvar</button>
+//           </div>
+
+//           <div className="btn">
+//             <button onClick={()=>props.history.goBack()} id="btnNew">Voltar</button>
+//           </div>
+//         </div>
+
+//     </div>
+//   )
+// }

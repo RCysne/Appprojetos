@@ -7,218 +7,68 @@
 }
 
 body {
+  font-family: 'Open Sans','Courier New', Courier, monospace;
+  font-weight: 200;
   width: 100%;
   height: 100%;
-  line-height: 2.5rem;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  font-family: Verdana;
-  font-weight: 200;
 }
 
-.container {
-  width: 30rem;
-  margin: 0 auto;
-  padding-top: 7rem;
-  padding-bottom: 8rem;
+::-webkit-scrollbar {
+  display: none;
 }
 
-header {
-  width: 100%;
+
+/* ========= RESPONSIVIDADE DESKTOP ======================== */
+
+/* @media  (max-width: 460px) {
+  .content {
+    width: 100%;
+  }
+} */
+
+
+/* ============== BUTTONS ========================== */
+
+.buttons {
   display: flex;
-  justify-content: center;
-}
-
-header a, Link {
-  padding: 2rem ;
-  text-decoration: none;
-  color: black;
-  font-family: 'Open Sans','Courier New', Courier, monospace;
-  font-weight: 100;
-  border-bottom: 1px solid #BB161B;
-}
-
-header a:hover {
-  color: #BB161B;
-}
-
-.appprojetosHome {
-  text-align: center;
-  font-size: 10rem;
-  margin-top: 8rem;
-  font-family: 'Open Sans','Courier New', Courier, monospace;
-  font-weight: 100;
-}
-
-/* ------------- FORM 1 LOGIN APPPROJETOS ------------ */
-
-fieldset {
-  margin-top: 5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border-color: rgb(158, 160, 162);
-  width: 100%;
-  height: 25rem;
-  border-radius: 3rem;
-  line-height: 1rem;
-  padding-left: 5rem;
-}
-
-legend {
-  font-weight: bold;
-  padding: 0.5rem;
-  letter-spacing: 0.1rem;
-  color: black;
-  font-size: 1.7rem;
-}
-
-.clientLogin {
-  text-align: left;
-  margin-top: 1.7rem;
-  margin-bottom: .5rem;
-  font-weight: 700;
-}
-
-input {
-  border: none;
-  border-bottom: 1px solid rgb(82, 92, 92);
-  padding: 5px 10px;
-  outline: none;
-  width: 100%;
-  margin-top: 0.2rem;
-  margin-bottom: 0.8rem;
-}
-
-#email {
-  width: 15rem;
-  background: white;
+  align-items: center;
+  justify-content: space-around;
   margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0 1.5rem 2rem 1rem;
+}
+
+.btn-add-projects {
   margin-top: 2rem;
 }
 
-#password {
-  width: 15rem;
-  background: white;
+.buttons-login {
   margin-bottom: 2rem;
+  margin-top: 5rem;
 }
 
-
-.btn {
-  position: relative;
-}
-
-#btnE {
-  width: 80%;
+#btnE, #btnNew, #btn_register, #btnSave, #btnNewClient, #btnView, #btnSave, #btnLoadProjects, #btn_save, #btnBack {
+  width: 8rem;
   height: 2rem;
   border-radius: 3rem;
   border: none;
   cursor: pointer;
-  margin-top: 2rem;
   color: black;
+  box-shadow: .3rem .3rem .2rem grey;
 }
 
 #btnE:hover {
   border:1px solid black;
 }
 
-
-/* --------------- NEW CLIENT --------------- */
-
-.clientForm {
-  padding: 4rem;
-  height: 30rem;
-}
-
-.logomarca {
-  margin: 0 auto;
-}
-
-#logo {
-  width: 27rem;
-  border-radius: .2rem;
-}
-
-.projects {
-  text-align: center;
-  width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 3rem;
-  width: 20rem;
-  margin-left: 3.2rem;
-}
-
-#btnNew {
-  width: 8rem;
-  height: 2rem;
-  border-radius: 3rem;
-  border: none;
-  cursor: pointer;
-  margin-top: 6rem;
-  color: black;
-}
-
 #btnNew:hover {
   border:1px solid black;
 }
 
-#btnView {
-  width: 8rem;
-  height: 2rem;
-  border-radius: 3rem;
-  border: none;
-  cursor: pointer;
-  margin-top: 6rem;
-  color: black;
-}
-
 #btnView:hover {
   border:1px solid black;
-}
-
-
-/* --------------- NEW CLIENT ------------------------ */
-
-.newClient {
-  color: black;
-  font-size: medium;
-  height: 2rem;
-  border-radius: .3rem;
-  background: white;
-  padding-left: .3rem;
-  margin-left: .2rem;
-  margin-top: 3rem;
-}
-
-.newClient input {
-  width: 15rem;
-}
-
-.btnNewClient {
-  display: flex;
-  justify-content: center;
-}
-
-#btnNewClient, #btnSave, #btnLoadProjects, #btn_register{
-  width: 80%;
-  height: 2rem;
-  border-radius: 3rem;
-  border: none;
-  cursor: pointer;
-  margin-top: 2.8rem;
-  color: black;
-  
-}
-
-#btnSave {
-  margin-left: 2.8rem;
 }
 
 #btnNewClient:hover {
@@ -227,15 +77,178 @@ input {
 }
 #btnSave:hover {
   border: 1px solid black;
+  cursor: pointer;
 } 
 
 #btnLoadProjects {
   border: 1px solid black;
 }
 
+#btn_register {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
 #btn_register:hover {
   border: 1px solid black;
+  cursor: pointer;
 }
+
+#btnLoadProjects:hover {
+  border: 1px solid black;
+} 
+
+.btn-id {
+  margin-top: 5rem;
+}
+
+/* ============== END BUTTONS ====================== */
+
+
+/* =============== HOME ======================= */
+
+.container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+header {
+  
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  
+}
+
+
+header a, Link {
+  padding: .8rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  border-bottom: 1px solid #BB161B;
+  margin-bottom: .5rem;
+}
+
+header a:hover {
+  color: #BB161B;
+}
+
+.input-text-form {
+  text-align: center;
+}
+
+
+.logo-appprojetos img {
+  width: 10rem;
+  height: 10rem;
+}
+
+
+/* ============= END HOME =========================== */
+
+
+
+/* ============= FORM LOGIN APPPROJETOS =============- */
+.login-form {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#label-login {
+  margin-left: 3rem;
+  font-weight: 500;
+}
+
+
+.clientLogin {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.input-text-form {
+  margin-top: 5rem;
+}
+
+label {
+  font-size: .9rem;
+}
+
+input {
+  
+  border: none;
+  border-bottom: 1px solid rgb(82, 92, 92);
+  padding: 5px 5px;
+  outline: none;
+  width: 15rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#email {
+ 
+  width: 15rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+#password {
+  width: 15rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.login-error {
+  text-align: center;
+  color: #BB161B;
+}
+/* ================= FORM LOGIN END ==================  */
+
+/* ================= PROJECT ID =========== */
+
+
+/* --------------- CLIENT / USER --------------- */
+
+.logomarca {
+  margin: 0 auto;
+}
+
+#logo {
+  width: 10rem;
+}
+
+.projects {
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+
+
+
+/* --------------- NEW PROJECT ------------------------ */
+
+.newClient {
+  color: black;
+  font-size: medium;
+  height: 2rem;
+  background: white;
+  /* padding-left: .3rem;
+  margin-left: .2rem; */
+  margin-top: 3rem;
+}
+
+.newClient input {
+  width: 15rem;
+}
+
 
 /* ---------------  PROJECT LIST ----------------*/
 
@@ -247,16 +260,20 @@ input {
   text-align: center;
   width: 100%;
   margin-top: 4rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .registeredList {
-  margin-top: 3rem;
-  display: flex;
+  margin-top: 2rem;
+  display: inline-block;
 }
 
-ul {
-  margin-right: 2.2rem;
+.listProjects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  text-align: center;
+  margin-bottom: 10rem;
 }
 
 li {
@@ -271,50 +288,20 @@ li:hover {
   cursor: pointer;
 }
 
-/* ------------ PROJECT GALLERY ------------------ */
-
-.projectsGallery {
-  text-align: center;
-  width: 100%;
-  margin-top: 4rem;
-  font-weight: 700;
+#title-projects {
+  margin-bottom: 3rem;
+  font-weight: 500;
 }
 
-.registeredListGallery {
-  margin-top: 4rem;
-}
-
-.listProjectsGallery {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.listProjectsGallery li {
-  list-style: none;
-  margin-left: 1rem;
-  font-size: .8rem;
+.project-list-add {
   text-align: center;
 }
 
-.imgProject {
-  width: 120px;
-
+.registeredList {
+  margin: 0 auto;
 }
 
-.imgProject:hover {
-  border: 1.5px solid #BB161B;
-  cursor: pointer;
-}
 
-#btnLoadProjects {
-  margin-left: 2.8rem;
-  margin-top: 2.7rem;
-}
-
-#btnLoadProjects:hover {
-  border: 1px solid black;
-} 
 
 /* ---------- REGISTER CLIENTS-------------------- */
 
@@ -324,132 +311,13 @@ li:hover {
 }
 
 .sectionForm {
-  border: 1px solid black;
-  padding: 3rem;
-  border-radius: 5rem;
+  padding-left: 4rem;
 }
 
-/* .registerForm {
-  border: 1px solid black;
-  border-radius: 3rem;
-  width: 40rem;
-  height: 100%;
-}
-
-.logoRegister {
-  text-align: center;
-  padding-top: 3rem;
-}
-
-#logoRegister {
-  width: 20rem;
+.textInput {
+  text-align: left;
 }
 
 
-.nav-tabs {
-  width: 600px;
-  height: 400px;
-  margin: 100px auto;
 
-  position: relative;
-}
-
-.nav-tabs ul {
-  list-style: none;
-}
-
-.nav-tabs ul li {
-  float: left;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.labelF {
-  width: 300px;
-  padding: 1.5rem;
-  background-color: white;
-  display: block;
-  color: black;
-  cursor: pointer;
-  text-align: center;
-  font-weight: 500;
-  border: 1px solid black;
-
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-  border-radius: 0.6rem 0.6rem 0 0;
-} */
-
-/* Retirando os marcadores do input radio */
-
-/* .rd_tabs {
-  display: none;
-} */
-
-/* Quando o input estiver checked altera o seletor irmão usando o ~ */
-/* .rd_tabs:checked ~ label {
-  background-color: rgb(158, 160, 162);
-}
-
-.rd_tabs:checked ~ .content {
-  display: block;
-}
-
-.content {
-  border-top: .1rem solid black;
-  background-color: white;
-  border-radius: 0.6rem;
-  display: none;
-  position: absolute;
-  height: auto;
-  width: 600px;
-  left: 0;
-}
-
-.content article {
-  padding: 10px;
-} */
-
-/*------------------------ Formulário -----------------*/
-
-/* .partner {
-  border: 1px solid black;
-  padding: 2rem;
-  border-radius: 0 0 .5rem .5rem;
-}
-
-.login-data {
-  border: 1px solid black;
-  padding: 1.5rem;
-  border-radius: 0 0 .5rem .5rem;
-}
-
-input[type='text'],
-input[type='password'],
-input[type='email'] {
-  border: none;
-  border-bottom: 1px solid #1890ff;
-  padding: 5px 10px;
-  outline: none;
-  width: 100%;
-  margin-top: 0.2rem;
-  margin-bottom: 0.8rem;
-}
-
-
-.namePartner .nameBusiness .emailPartner .login .password-data {
-  display: inline-block;
-}
-
-.btn_register, .btn_client {
-  width: 80%;
-  height: 2rem;
-  border-radius: 3rem;
-  border: none;
-  cursor: pointer;
-  margin-top: 6rem;
-  color: rgb(114, 113, 113);
-  color: black;
-}
- */
-
+/* ============= RESPONSIVIDADE ============ */

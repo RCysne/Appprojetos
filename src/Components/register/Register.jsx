@@ -1,107 +1,73 @@
-import React from 'react';
+import React, {useState} from 'react';
+import axios from 'axios';
 
-export default function Register() {
+export default function Register(props) {
+  const [username, setUsername] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  async function reqRegister() {
+    try {
+      await axios({
+        method: `POST`,
+        url: `http://localhost:3333/register`,
+        data: {
+          username,
+          email,
+          password
+        }
+      })
+      return props.history.push('/login')
+    } catch (error) {
+      console.log('Error')
+    }
+  }
   return (
-      <div className='registerForm container'>
-        <div className="logoRegister">
-          <div className="white">
-            {/* <h1>APPProjetos</h1> */}
-          </div>
-        </div>
+      <div className='registerForm '>
+
         <section className="sectionForm" id="sectionForm">
-          <form className="formulario" action="">
-            <nav className="nav-tabs">
-              <ul>
-              <li>
-                  {/* <input
-                    type="radio"
-                    name="tabs"
-                    className="rd_tabs"
-                    id="tab2"
-                  /> */}
-                  <label className="labelF" htmlFor="tab2">
+          <form className="formulario">
+            
+                 <legend id="title-projects" className='register-legend'>
                     Cadastrar
-                  </label>
+                  </legend>
                   <div className="content">
-                    <div className="partner">
-                      <div className="namePartner">
-                        <label htmlFor="nomeParceiro">Nome: </label>
+
+                        <legend id='nome-legend' className='textInput'>Nome: </legend>
                         <input
+                        onChange={(e) => setUsername(e.target.value)}
                           type="text"
                           name="nomeParceiro"
                           id="nomeParceiro"
                           placeholder="Digite o seu nome."
                         />
-                      </div>
-                      <div className="nameBusiness">
-                        <label htmlFor="nomeEmpresa">Empresa: </label>
+                    
+                        <legend id='email-legend' className='textInput'>Email: </legend>
                         <input
-                          type="text"
-                          name="nomeEmpresa"
-                          id="nomeEmpresa"
-                          placeholder="Digite o nome da empresa."
-                        />
-                      </div>
-                      <div className="emailPartner">
-                        <label htmlFor="emailParceiro">Email: </label>
-                        <input
+                        onChange={(e) => setEmail(e.target.value)}
                           type="email"
-                          name="emailParceiro"
-                          id="emailParceiro"
-                          placeholder="Digite o email cadastrado."
+                          name="email"
+                          id="email"
+                          placeholder="Digite o seu email."
                         />
-                      </div>
-
-                      <button className="btn_register" id="btn_register">
-                        Enviar
-                      </button>
-                    </div>
-                  </div>
-                </li>
-                {/* <li>
-                  <input
-                    type="radio"
-                    name="tabs"
-                    className="rd_tabs"
-                    id="tab1"
-                    checked
-                  />
-                  <label className="labelF" htmlFor="tab1">
-                    Login
-                  </label>
-                  <div className="content">
-                    <div className="login-data">
-                      <div className="login">
-                        <label htmlFor="loginParceiro">
-                          Digite seu login:{' '}
-                        </label>
+                     
+                        <legend id='password-legend' className='textInput'>Senha: </legend>
                         <input
-                          type="text"
-                          name="loginRegister"
-                          id="loginRegister"
-                          placeholder="Login"
-                        />
-                      </div>
-                      <div className="password-data">
-                        <label htmlFor="senhaParceiro">
-                          Digite sua senha:{' '}
-                        </label>
-                        <input
+                        onChange={(e) => setPassword(e.target.value)}
                           type="password"
-                          name="senhaParceiro"
-                          id="senhaParceiro"
-                          placeholder="Senha"
+                          name="password-register"
+                          id="password-register"
+                          placeholder="Digite sua senha."
                         />
-                      </div>
-                      <button className="btn_client" id="btn_client">
+                     
+
+                      <button onClick={reqRegister} type="button" className="btn_register" id="btn_register">
                         Enviar
                       </button>
-                    </div>
+
                   </div>
-                </li> */}
-              </ul>
-            </nav>
-          </form>
+
+            </form>
         </section>
       </div>
   )

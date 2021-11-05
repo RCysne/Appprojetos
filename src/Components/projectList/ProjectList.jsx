@@ -1,40 +1,66 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import logoluciana from '../../assets/images/logoDeitada.png'
 
-export default function ProjectList() {
+
+export default function ProjectList(props) {
+  const [projectList,setProjectList] = useState([]);
+  useEffect(() => {
+    requestProjectList()
+  },[]);
+  useEffect(() => {
+    requestProjectList()
+  }, [props.history]);
+
+  async function requestProjectList(){
+    try {
+
+      let {data} = await axios({
+        method: `GET`,
+        url: `http://localhost:3333/getMediaFiles`,
+      })
+      let projects = [];
+      data.forEach(element => {
+        if (element.user_id === localStorage.getItem(`user_id`)) projects.push(element)
+      });
+      setProjectList(projects)
+    } catch (error) {
+      
+    }
+  }
   return(
     <div className='container'>
-    
-      <fieldset className="clientFormProjects">
-        
+
         <div className='logomarca'>
-          <img id='logo' src="/assets/images/logoDeitada.png"   alt="Logomarca" />
+          <img id='logo' src={logoluciana}   alt="Logomarca do escritório Luciana Otoch Arquitetura" />
           </div>
-          <p className='projects2'>PROJETOS</p>
+
+          <legend id="title-projects">PROJETOS</legend>
+
       <div className="projectArea">
         <div className="registeredList">
-          
+          <div className="project-list-add">
           <ul className='listProjects'>
-            <li>Padaria X</li>
-            <li>Casa 1 Alphaville</li>
-            <li>Casa 2 Alphaville</li>
-            <li>Comércio Tudo Ok</li>
-            <li>Loja Sapatiado</li>
-            <li>Terreno Baldio</li>
-            <li>Quarteirão com Queijo</li>
-            <li>Restaurante de sushi</li>
-            <li>Zé da Esquina</li>
+            {projectList.map((element) => {
+              return <a href={`http://localhost:3333/${element.file}`} target="_blank" rel="noopener noreferrer" >{element.project_name}</a>
+            })}
           </ul>
+          </div>
 
-          <ul>
-            <li>Fazenda X</li>
-            <li>Frigorífico Y</li>
-            <li>Casa de Show</li>
-            <li>Shopping</li>
-          </ul>
+        <div className="buttons-list">
+        
+        <div className="btn">
+          <button onClick={()=>props.history.goBack()} id="btnNew">Voltar</button>
+        </div>
+        
+        <div className="btn">
+          <button onClick={()=> props.history.push('/image')} id="btnE">Adicionar</button>
+        </div>
 
         </div>
         </div>
-      </fieldset>
       </div>
+
+    </div>
   )
 }

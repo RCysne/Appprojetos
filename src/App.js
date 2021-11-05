@@ -8,6 +8,9 @@ import Client from './Components/client/Client'
 import NewClient from './Components/newClient/NewClient'
 import ProjectList from './Components/projectList/ProjectList'
 import ProjectGallery from './Components/projectGallery/ProjectGallery'
+import ProjectId from './Components/projectId/ProjectId'
+import Image from './Components/images/Image'
+
 
 export default function App() {
   return (
@@ -26,6 +29,9 @@ export default function App() {
           <Route path="/client" component={Client} />
         </Switch>
         <Switch>
+          <Route path='/project-id' component={ProjectId} />
+        </Switch>
+        <Switch>
           <Route path="/new-client" component={NewClient} />
         </Switch>
       <Switch>
@@ -33,6 +39,9 @@ export default function App() {
       </Switch> 
         <Switch>
           <Route path="/project-gallery" component={ProjectGallery} />
+        </Switch>
+        <Switch>
+          <Route path="/image" component={Image} />
         </Switch>
       </main>
     </>
